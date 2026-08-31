@@ -171,6 +171,25 @@
   /* ───── セクション共通 ───── */
   .sec { padding: 76px 0; }
   .sec.alt { background: #fff; }
+
+  /* 実際の画面 */
+  .shots { margin-top: 34px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; align-items: start; }
+  .shot { background: #fff; border: 1px solid #E1EAEA; border-radius: 16px; overflow: hidden;
+          box-shadow: 0 6px 22px rgba(14,42,57,.07); }
+  .shot img { display: block; width: 100%; height: auto; }
+  .shot .cap { padding: 14px 18px 16px; }
+  .shot .cap b { display: block; font-size: 15.5px; color: var(--ink); }
+  .shot .cap p { margin: 5px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.75; }
+  .shot.dark { background: var(--ink); border-color: var(--ink); }
+  .shot.dark .cap b { color: #fff; }
+  .shot.dark .cap p { color: #AFC7CE; }
+  .shots-sub { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+  .shot.phone img { max-width: 280px; margin: 16px auto 0; border-radius: 12px;
+                    box-shadow: 0 4px 16px rgba(14,42,57,.13); }
+  .shots-note { margin: 18px 0 0; font-size: 11.5px; color: var(--muted); line-height: 1.8; }
+  @media (max-width: 860px) {
+    .shots, .shots-sub { grid-template-columns: 1fr; }
+  }
   .sec.dark { background: var(--ink); color: #fff; position: relative; overflow: hidden; }
   .sec.dark::before {
     content: ""; position: absolute; right: -140px; top: -180px;
@@ -721,10 +740,59 @@
   </div>
 </section>
 
+<!-- ═════════ 06 実際の画面 ═════════ -->
+<section class="sec alt" id="screens">
+  <div class="wrap">
+    <div class="sec-no"><span class="n">06</span><span class="line"></span></div>
+    <h2>実際の画面を、そのままお見せします</h2>
+    <p class="lede">イメージ画像ではありません。すべて実際にご利用いただくアプリの画面です（店舗名・投稿内容はサンプルです）。</p>
+    <div class="shots">
+      <div class="shot fade">
+        <img src="images/app-posts.jpg" alt="投稿の確認・承認画面。AIが作った投稿が一覧に並び、承認して投稿・編集・削除のボタンが並ぶ" loading="lazy" width="1200" height="750">
+        <div class="cap">
+          <b>投稿の確認・承認</b>
+          <p>AIが作った明日の投稿が並びます。よければ「承認して投稿」、直したいときは「編集」。この画面はLINEのメニューからそのまま開けます。</p>
+        </div>
+      </div>
+      <div class="shot dark fade phone">
+        <img src="images/app-richmenu.jpg" alt="公式LINEのメニュー。投稿の確認・コメント・お店や自分の情報・設定・投稿分析・よくある質問の6つのボタン" loading="lazy" width="900" height="607">
+        <div class="cap">
+          <b>公式LINEのメニュー</b>
+          <p>トーク画面の下に表示される6つのボタン。押すだけで、その画面がLINEの中で開きます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="shots-sub">
+      <div class="shot fade">
+        <img src="images/app-modenav.jpg" alt="発信の目的を選ぶ画面。お店の集客と個人にファンをつけるの2つのカード" loading="lazy" width="1200" height="896">
+        <div class="cap">
+          <b>最初に、発信の目的を選ぶ</b>
+          <p>「お店の集客」か「個人にファンをつける」か。選ぶだけで、質問もAIの投稿の作り方も切り替わります。</p>
+        </div>
+      </div>
+      <div class="shot fade">
+        <img src="images/app-events.jpg" alt="イベント告知の一覧画面。開催日から逆算した告知投稿が5回分並んでいる" loading="lazy" width="1200" height="570">
+        <div class="cap">
+          <b>イベント告知</b>
+          <p>開催日を入れるだけで、14日前から当日までの告知投稿が自動で並びます。</p>
+        </div>
+      </div>
+      <div class="shot fade phone">
+        <img src="images/app-counseling-sp.jpg" alt="スマートフォンでのお店の情報を登録する質問画面" loading="lazy" width="560" height="1212">
+        <div class="cap">
+          <b>質問に答えるだけ（スマホ）</b>
+          <p>業種や強みの質問にタップで答えるだけ。LINEの中で、10〜15分で終わります。</p>
+        </div>
+      </div>
+    </div>
+    <p class="shots-note">※ 掲載している画面は実際のアプリのものです。表示内容・デザインは改善のため変更される場合があります。店舗名・投稿文はサンプルとして作成したものです。</p>
+  </div>
+</section>
+
 <!-- ═════════ 06 安心 ═════════ -->
 <section class="sec alt" id="safe">
   <div class="wrap">
-    <div class="sec-no"><span class="n">06</span><span class="line"></span></div>
+    <div class="sec-no"><span class="n">07</span><span class="line"></span></div>
     <h2>「AIに任せて大丈夫？」への答え</h2>
     <p class="lede">勝手におかしなことを書かれては困る——当然のご心配です。3つの仕組みで防いでいます。</p>
     <div class="safe-grid">
@@ -751,7 +819,7 @@
 <!-- ═════════ 07 実績 ═════════ -->
 <section class="sec dark" id="proof">
   <div class="wrap">
-    <div class="sec-no"><span class="n">07</span><span class="line"></span></div>
+    <div class="sec-no"><span class="n">08</span><span class="line"></span></div>
     <h2>実際に出た数字</h2>
     <p class="lede">自社店舗（Moveact）でのThreads運用データです。</p>
     <div class="proof-grid">
@@ -783,7 +851,7 @@
 <!-- ═════════ 08 料金 ═════════ -->
 <section class="sec" id="pricing">
   <div class="wrap">
-    <div class="sec-no"><span class="n">08</span><span class="line"></span></div>
+    <div class="sec-no"><span class="n">09</span><span class="line"></span></div>
     <h2>料金プラン（税込・月額）</h2>
     <p class="lede">おすすめは<b>1日3投稿のプロプラン</b>です。仕組みはシンプル。月額だけの明朗会計で、いつでもプラン変更・解約ができます。</p>
     <div class="plan-grid">
@@ -851,7 +919,7 @@
 <!-- ═════════ 09 はじめ方 ═════════ -->
 <section class="sec alt" id="start">
   <div class="wrap">
-    <div class="sec-no"><span class="n">09</span><span class="line"></span></div>
+    <div class="sec-no"><span class="n">10</span><span class="line"></span></div>
     <h2>たった3ステップ、合わせて1時間ほど</h2>
     <p class="lede">ここまで終われば、翌日から自動で投稿が始まります。ステップ2から先はスマホのLINEの中だけで進められます。Threadsアカウントが未開設でも、開設からサポートいたします。</p>
     <div class="step-grid">
@@ -880,7 +948,7 @@
 <!-- ═════════ 10 FAQ ═════════ -->
 <section class="sec" id="faq">
   <div class="wrap">
-    <div class="sec-no"><span class="n">10</span><span class="line"></span></div>
+    <div class="sec-no"><span class="n">11</span><span class="line"></span></div>
     <h2>よくあるご質問</h2>
     <div class="faq" style="margin-top: 30px;">
       <details class="fade">
